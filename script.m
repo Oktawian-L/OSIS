@@ -4,3 +4,4 @@
 a = 3;
 disp (a * 3)
 A = [1 2 3; 4 5 6]
+adj_to_min_plus(A)
