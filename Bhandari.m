@@ -11,12 +11,10 @@ function T=Bhandari(graph,s,t,k)
 
 [ distance, path ]=dijkstra(graph,s,t);
 
-for i = 1:k
-  path = [path s];  % vector from Ponyhunter
-  pos = find(path < i); % find position - only for x < i   
-  b = [path(path[1]:path[pos-1]) 3 path(path[pos]:end)]; %  b = [a(1:2) 3 a
-   %weigh = 0 
-  T = b;
+for i = 2:k
+  pos = find(path > i); % find position - only for x < i   
+  T = [path(path(1):path(pos-1)) path(pos)+0.1 path(pos)+0.2 path(path(pos+1):end)];
+
  
   end
  end 
