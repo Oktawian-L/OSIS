@@ -8,6 +8,9 @@
 
 function T=Bhandari(graph,s,t,k)
 %Find th shortest path Pi from node s to node t
+
+[ distance, path ]=dijkstra(graph,s,t);
+
 for i = 1:k
   T(i)= i*i % example only
   end
