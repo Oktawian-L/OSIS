@@ -7,3 +7,6 @@ UsedCars <- as(UsedCars2, "binaryRatingMatrix");
 e <-"evaluationScheme"(UsedCars, method="split",  train=0.9, k=NULL, given =0, goodRating = NA)
 
 
+install.packages("sqldf")
+> gd$mStart <- as.Date(gd$mStart, format="%d/%m/%Y")
+> gd$sStart <- as.Date(gd$sStart, format="%d/%m/%Y")
