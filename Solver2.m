@@ -1,6 +1,6 @@
 % linear solver "glpk” - means GNU Linear Programming Kit
 % non linear "fsolve" - not our problem
-function [xmax, fmax, status, extra]=Solver
+function [xmin, fmin, status, extra]=Solver2
 %objective function
 %c = [10, 6, 4]';
 c = [0 5 8 0 0 0 2 7 0 0 0 4 0 0 0 0];
@@ -34,8 +34,7 @@ param.msglev = 1;
 % max numbers of iteration - dont burn my PC : )
 param.itlim = 100;
 
-[xmax, fmax, status, extra] = glpk (c, A, b, lb, ub, ctype, vartype, s, param)
+[xmin, fmin, status, extra] = glpk (c, A, b, lb, ub, ctype, vartype, s, param)
    
 return
 endfunction
- 

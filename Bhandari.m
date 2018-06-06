@@ -12,8 +12,12 @@ function T=Bhandari(graph,s,t,k)
 [ distance, path ]=dijkstra(graph,s,t);
 
 for i = 2:k
-  pos = find(path > i); % find position - only for x < i   
-  T = [path(path(1):path(pos-1)) path(pos)+0.1 path(pos)+0.2 path(path(pos+1):end)];
+  pos = find(path > i); % find position - only for x < i 
+  
+  T = [path(path(1):path(pos-1)) 
+        path(pos)+0.1 
+        path(pos)+0.2 
+        path(path(pos+1):end)];
 
  
   end
